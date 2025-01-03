@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Go</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(156, 160, 138, 0);
+    }
+
+    #raja {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .class {
+      height: 130px;
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #one {
+      border-right: black 2px solid;
+      border-bottom: 2px black solid;
+    }
+
+    #two {
+      border-right: black 2px solid;
+      border-bottom: 2px black solid;
+    }
+
+    #three {
+      border-right: black 2px solid;
+    }
+
+    #four {
+      border-right: black 2px solid;
+      border-bottom: 2px black solid;
+    }
+
+    #five {
+      border-right: black 2px solid;
+      border-bottom: 2px black solid;
+    }
+
+    #six {
+      border-right: black 2px solid;
+
+    }
+
+    #seven {
+      border-bottom: 2px black solid;
+    }
+
+    #eight {
+      border-bottom: black 2px solid;
+    }
+
+    #punit {
+      height: 100px;
+      width: 100px;
+      border-radius: 7px;
+      background-color: bisque;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      color: black;
+    }
+
+    #reset {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      gap: 10px;
+    }
+
+    #result {
+      height: 70px;
+      width: fit-content;
+      background-color: rgba(214, 177, 151, 0.297);
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+    }
+
+    .result {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      font-size: 40px;
+    }
+
+    #ram {
+      background-color: black;
+      color: aliceblue;
+      font-size: 20px;
+      border-radius: 15px;
+      height: 40px;
+      width: 130px;
+      cursor: pointer;
+
+    }
+
+    .ram {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="raja">
+    <div class="linefirst">
+      <div class="class" id="one">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="two">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="three">
+        <button id="punit"></button>
+      </div>
+    </div>
+    <div class="linesecond">
+      <div class="class" id="four">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="five">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="six">
+        <button id="punit"></button>
+      </div>
+    </div>
+    <div class="linethird">
+      <div class="class" id="seven">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="eight">
+        <button id="punit"></button>
+      </div>
+      <div class="class" id="nine">
+        <button id="punit"></button>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div id="reset">
+    <div class="result">Result</div>
+    <div id="result"></div>
+  </div>
+  <br>
+  <div class="ram"><button id="ram">New Game</button></div>
+
+  <script>
+    let name1 = prompt("Enter your name!");
+    let name2 = prompt("Enter the second name!");
+
+    let punit = document.querySelectorAll("#punit");
+    let value = true;
+    let button = document.querySelector("#ram");
+    let result = document.querySelector("#result");
+    let newgame = document.querySelector("#ram");
+
+    punit.forEach((pk) => {
+      pk.addEventListener("click", () => {
+        if (value) {
+          pk.innerText = name1;
+          value = false;
+        } else {
+          pk.innerText = name2;
+          value = true;
+        }
+        pk.disabled = true;
+        checkwinner();
+      });
+    });
+
+    const winpatterns = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+
+    const disablepunit = () => {
+      for (let box of punit) {
+        box.disabled = true;
+      }
+    }
+
+    const reset = () => {
+      value = true;
+      for (let box of punit) {
+        box.disabled = false;
+        box.innerText = "";
+      }
+    };
+
+    newgame.addEventListener("click", reset);
+
+    const checkwinner = () => {
+      for (let pattern of winpatterns) {
+        let pos1 = punit[pattern[0]].innerText;
+        let pos2 = punit[pattern[1]].innerText;
+        let pos3 = punit[pattern[2]].innerText;
+        if (pos1 != "" && pos2 != "" && pos3 != "") {
+          if (pos1 === pos2 && pos2 === pos3) {
+            // console.log("winner")
+            result.innerText = `Winner is ${pos1}`
+            result.style.backgroundColor = "green";
+            disablepunit();
+          }
+        }
+      }
+    }
+
+  </script>
+</body>
+
+</html>
