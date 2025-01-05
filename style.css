@@ -1,0 +1,372 @@
+body {
+    margin: 0px;
+    padding: 0 px;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: rgba(0, 0, 0,.5);
+    border-bottom: 2px solid rgb(0, 255, 0);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    z-index: 2;
+}
+
+p {
+    color: white;
+    width: 600px;
+}
+
+.a {
+    flex-grow: 1;
+    display: flex;
+    width: max-content;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    table-layout: fixed;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+#punit {
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+    cursor: auto;
+}
+
+#dinesh {
+    color: white;
+}
+
+#kappu {
+    color: rgb(0, 255, 0);
+}
+
+#pappu {
+    color: white;
+    display: flex;
+}
+
+div {
+    color: rgb(255, 255, 255);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0;
+}
+
+mainone {
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+h1 {
+    font-size: 50px;
+    display: flex;
+    margin: 0;
+}
+
+#pop::after {
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: rgb(0, 255, 0);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+#pop:hover {
+    color: rgb(0, 255, 0);
+}
+
+#pop:hover::after {
+    transform: scaleX(.5);
+
+}
+
+img {
+    height: 300px;
+    width: 243.75px;
+    border-radius: 50%;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0s;
+}
+
+img:hover {
+    box-shadow: 0px 0px 50px rgb(0, 255, 0);
+}
+
+ai {
+    color: rgb(0, 255, 0);
+}
+
+#social:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px rgb(0, 255, 0), 0px 0px 10px rgb(0, 255, 0);
+}
+
+#social {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 255, 0);
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-delay: 0s;
+    transition-timing-function: 1;
+    border: 2px solid rgb(0, 255, 0);
+    border-radius: 50%;
+
+}
+
+section {
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: 0;
+}
+
+media {
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+#rajeev {
+    text-decoration: none;
+}
+
+
+#kapil {
+    font-size: 40px;
+    text-decoration: 1px rgb(0, 255, 0) solid;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(0, 255, 0);
+    display: grid;
+    justify-content: center;
+    margin: 0;
+    color: rgb(0, 255, 0);
+}
+
+.Jone {
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    border: 1.2px solid rgb(0, 255, 0);
+    border-radius: 7px;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-delay: 0s;
+    transition-timing-function: 1;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+}
+
+.Jone:hover {
+    transform: scale(1.12);
+    box-shadow: 0px 0px 10px rgb(0, 255, 0), 0px 0px 10px rgb(0, 255, 0);
+}
+
+#contener {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 20px; */
+}
+
+h3 {
+    /* padding: 1%; */
+    justify-content: center;
+    color: rgb(0, 255, 0);
+}
+
+abc {
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+
+.jitu {
+    height: 25%;
+    width: 30%;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    /* padding-left: 2%; */
+    /* gap : 30px; */
+    border: 1px solid rgb(0, 255, 0);
+    border-radius: 7px;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-delay: 0s;
+    transition-timing-function: 1;
+}
+
+#hello {
+    color: rgb(0, 255, 0);
+
+}
+
+titu {
+    color: rgb(0, 255, 0);
+    padding: 3%;
+    padding-top: 3%;
+}
+
+.skill {
+    /* text-align: center; */
+    width: 3%px;
+}
+
+.progress {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    text-align: center;
+    color: black;
+    background-color: limegreen;
+    line-height: 20px;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.jitu:hover {
+    transform: scale(1.12);
+    box-shadow: 0px 0px 10px rgb(0, 255, 0), 0px 0px 10px rgb(0, 255, 0);
+}
+
+#dileep {
+    height: 200px;
+}
+
+#kiku {
+    font-size: 30px;
+    color: rgb(0, 255, 0);
+    text-align: center;
+}
+
+#jiju {
+    background-color: #333;
+    border: none;
+    height: 200px;
+    padding-right: 20px;
+    padding-bottom: 18%;
+}
+
+#jiju:hover {
+    transform: none;
+}
+
+#name {
+    width: 100%;
+    border: 1px rgb(0, 255, 0) solid;
+    border-radius: 7px;
+    padding-left: 10px;
+    height: 20px;
+}
+
+#message {
+    width: 100%;
+    border: 1px rgb(0, 255, 0) solid;
+    border-radius: 7px;
+    padding-left: 10px;
+    height: 80px;
+}
+
+button {
+    background-color: #333;
+    border: 2px solid rgb(0, 255, 0);
+    color: green;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    transition-property: all;
+    transition-duration: .6s;
+    transition-delay: 0s;
+    transition-timing-function: 1;
+}
+
+button:hover {
+    box-shadow: 0px 0px 15px rgb(0, 255, 0);
+    border: #333 solid 3px;
+    background-color: rgb(0, 255, 0);
+    color: #333
+}
+
+#kabul {
+    gap: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    border-top: 2px solid rgb(0, 255, 0);
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+
+.love {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    /* align-items: center; */
+}
+
+.rep {
+    text-decoration: none;
+    font-size: 16px;
+    /* text-wrap: 120px; */
+    color: rgb(0, 255, 0);
+}
+
+#sala {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 255, 0);
+}
+
+.rep:hover {
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(0, 255, 0);
+}
+
+#sala:hover {
+    text-decoration: solid;
+    text-decoration-line: underline;
+    text-decoration-color: rgb(0, 255, 0);
+}
